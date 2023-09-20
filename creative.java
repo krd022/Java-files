@@ -20,7 +20,7 @@ public class creative {
         // Display result
         System.out.println("Slept Great: " + negatedValue);
         
-        // Close the scanner to release resources
+        // Close the scanner
         scanner.close();
     }
 }
