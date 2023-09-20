@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BooleanManipulation {
+public class creative {
     public static void main(String[] args) {
         // Scanner object for user input
         Scanner scanner = new Scanner(System.in);
