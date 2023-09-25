@@ -45,7 +45,7 @@ public class FlowControl {
             System.out.println("Sum of even and divisible by 8 numbers: " + evenAndDivisibleBy8Sum);
             System.out.println("Sum of not even and not divisible by 5 numbers: " + notEvenNotDivisibleBy5Sum);
 
-            // Using a do-while loop to count the numbers between num1 and num2.
+            //do-while loop to count the numbers between num1 and num2.
             int count = 0;
             int num = num1;
             do {
