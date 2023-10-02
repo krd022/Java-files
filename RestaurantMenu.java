@@ -4,15 +4,15 @@ public class RestaurantMenu {
     public static void main(String[] args) {
         int totalOrders = 20; // Specify the total number of orders here
 
-        // Create an array for each category (appetizers, entrees, desserts)
+        // array for each category (appetizers, entrees, desserts)
         String[] appetizers = {"Cactus Blossom", "Fried Pickles",  "Killer Ribs", "Lemon Pepper Steppers"};
         String[] entrees = {"Grilled Pork Chops", "Pulled Pork Chops", "Beef Tips", "Vegetable Plate", "Fried Sirloin"};
         String[] desserts = {"Granny`s Apple Classic", "Strawberry Cheesecake", "Big Ol` Brownie", "Peach Cobbler", "Cookie Crazy"};
 
-        // Create a map to store menu item prices
+        // map to store menu item prices
         Map<String, Double> menuPrices = new HashMap<>();
         
-        // Specify prices for each menu item
+        // prices for each menu item
         menuPrices.put("Cactus Blossom", 7.99);
         menuPrices.put("Fried Pickles", 6.49);
         menuPrices.put("Rattlesnake Bites", 5.99);
