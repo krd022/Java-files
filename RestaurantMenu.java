@@ -1,18 +1,20 @@
 import java.util.*;
 
 public class RestaurantMenu {
+    
     public static void main(String[] args) {
         int totalOrders = 20; // Specify the total number of orders here
 
-        // array for each category (appetizers, entrees, desserts)
+        // Create an array for each category (appetizers, entrees, desserts)
         String[] appetizers = {"Cactus Blossom", "Fried Pickles",  "Killer Ribs", "Lemon Pepper Steppers"};
         String[] entrees = {"Grilled Pork Chops", "Pulled Pork Chops", "Beef Tips", "Vegetable Plate", "Fried Sirloin"};
         String[] desserts = {"Granny`s Apple Classic", "Strawberry Cheesecake", "Big Ol` Brownie", "Peach Cobbler", "Cookie Crazy"};
 
-        // map to store menu item prices
+        
+        // Create a map to store menu item prices
         Map<String, Double> menuPrices = new HashMap<>();
         
-        // prices for each menu item
+        // Specify prices for each menu item
         menuPrices.put("Cactus Blossom", 7.99);
         menuPrices.put("Fried Pickles", 6.49);
         menuPrices.put("Rattlesnake Bites", 5.99);
@@ -31,9 +33,12 @@ public class RestaurantMenu {
         menuPrices.put("Peach Cobbler", 3.99);
         menuPrices.put("Cookie Crazy", 4.49);
 
+        // Display the menu
+        displayMenu(appetizers, entrees, desserts, menuPrices);
+
         // array to store orders and initialize total money made
         List<String> orders = new ArrayList<>();
-        double totalMoneyMade = 0.0;
+        double totalMoneyMade = 0.0d;
 
         // orders from the drive-thru
         for (int i = 0; i < totalOrders; i++) {
@@ -51,7 +56,7 @@ public class RestaurantMenu {
         }
 
         System.out.println("\nSummary:");
-        System.out.println("Total money made: $" + totalMoneyMade);
+        System.out.println("Total money made: $" + String.format("%.2f", totalMoneyMade));
 
         System.out.println("Percentage of sales for each item:");
         for (String item : menuPrices.keySet()) {
@@ -65,6 +70,28 @@ public class RestaurantMenu {
             System.out.println(entry.getKey() + ": " + entry.getValue() + " times");
         }
     }
+
+   // Display the menu
+   private static void displayMenu(String[] appetizers, String[] entrees, String[] desserts, Map<String, Double> menuPrices) {
+    System.out.println("Menu:");
+
+    System.out.println("Appetizers:");
+    for (String appetizer : appetizers) {
+        System.out.println(appetizer + " - $" + menuPrices.get(appetizer));
+    }
+
+    System.out.println("Entrees:");
+    for (String entree : entrees) {
+        System.out.println(entree + " - $" + menuPrices.get(entree));
+    }
+
+    System.out.println("Desserts:");
+    for (String dessert : desserts) {
+        System.out.println(dessert + " - $" + menuPrices.get(dessert));
+    }
+
+    System.out.println("\nPlease place your order." + "\nChoose one Item per vehicle.");
+}
 
     // random item from the menu
     private static String getRandomItem(String[]... categories) {
